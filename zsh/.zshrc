@@ -99,4 +99,5 @@ function fdp() {
     cd "$dir"
 }
 
+# Add Homebrew to PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
