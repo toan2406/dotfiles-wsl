@@ -22,6 +22,9 @@ return {
         float = {
           padding = 0,
           border = 'rounded',
+          win_options = {
+            winhighlight = 'NormalFloat:OilFloat',
+          },
           override = function(conf)
             conf.height = conf.height - 1
             return conf
@@ -32,9 +35,9 @@ return {
         },
       })
 
-      vim.api.nvim_set_hl(0, 'NormalFloat', { ctermbg = 'black' })
+      vim.api.nvim_set_hl(0, 'OilFloat', { ctermbg = 'black', ctermfg = 'white' })
 
       vim.keymap.set('n', '<leader>e', oil.toggle_float, { desc = 'Open parent directory' })
     end,
-  }
+  },
 }
