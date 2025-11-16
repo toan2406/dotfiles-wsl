@@ -3,8 +3,8 @@ return {
     'numToStr/Navigator.nvim',
     event = 'VeryLazy',
     config = function()
-      local map = vim.api.nvim_set_keymap
-      local opts = { noremap = true, silent = true }
+      local map = vim.keymap.set
+      local opts = { remap = false, silent = true }
 
       require('Navigator').setup({
         auto_save = nil,

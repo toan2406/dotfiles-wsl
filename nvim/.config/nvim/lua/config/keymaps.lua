@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = false })
-vim.api.nvim_set_keymap('n', '<Space>', ':', { noremap = true })
-vim.api.nvim_set_keymap('v', '<Space>', ':', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true })
+vim.keymap.set('i', 'jj', '<Esc>', { remap = true })
+vim.keymap.set('n', '<Space>', ':', { remap = false })
+vim.keymap.set('v', '<Space>', ':', { remap = false })
+vim.keymap.set('n', '<Esc>', ':noh<CR>', { remap = false })

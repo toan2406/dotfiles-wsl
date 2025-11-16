@@ -47,10 +47,10 @@ return {
       vim.keymap.set('n', '<leader>fw', fzf_lua.grep_cword, { desc = 'Fzf Word' })
       vim.keymap.set('n', '<leader>fb', fzf_lua.buffers, { desc = 'Fzf Buffers' })
 
-      vim.api.nvim_set_keymap('n', '<leader>p', '<leader>ff', { noremap = false })
-      vim.api.nvim_set_keymap('n', '<leader>s', '<leader>fg', { noremap = false })
-      vim.api.nvim_set_keymap('n', '<leader>b', '<leader>fb', { noremap = false })
-      vim.api.nvim_set_keymap('n', '<leader>w', '<leader>fw', { noremap = false })
+      vim.keymap.set('n', '<leader>p', '<leader>ff', { remap = true })
+      vim.keymap.set('n', '<leader>s', '<leader>fg', { remap = true })
+      vim.keymap.set('n', '<leader>b', '<leader>fb', { remap = true })
+      vim.keymap.set('n', '<leader>w', '<leader>fw', { remap = true })
     end,
   },
 }
