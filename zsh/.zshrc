@@ -101,3 +101,11 @@ function fdp() {
 
 # Add Homebrew to PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Lazyload nvm
+export NVM_DIR="$HOME/.nvm"
+nvm() {
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  nvm "$@"
+}
