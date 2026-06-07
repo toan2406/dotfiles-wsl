@@ -113,3 +113,6 @@ nvm() {
 # Load fzf
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+# Remove green highlighted color in WSL
+export LS_COLORS=$LS_COLORS:'ow=1;34:'
