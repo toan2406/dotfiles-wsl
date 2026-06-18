@@ -95,7 +95,7 @@ alias vi='nvim'
 
 function fdp() {
   local dir
-  dir=$({ echo "${HOME}/dotfiles-wsl"; find /mnt/d/Workspace -maxdepth 2 -type d -print 2> /dev/null; } | fzf -q "$1") &&
+  dir=$({ echo "${HOME}/dotfiles-wsl"; find /mnt/d/Workspace -maxdepth 2 -type d -print 2> /dev/null; find "${HOME}/Workspace" -maxdepth 2 -type d -print 2> /dev/null; } | fzf -q "$1") &&
     cd "$dir"
 }
 
@@ -116,3 +116,7 @@ nvm() {
 
 # Remove green highlighted color in WSL
 export LS_COLORS=$LS_COLORS:'ow=1;34:'
+
+# CUDA toolkit to build llama.cpp
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
