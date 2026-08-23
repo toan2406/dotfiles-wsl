@@ -63,6 +63,8 @@ plugins=(
   zsh-autosuggestions
 )
 
+source $HOME/.secrets
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -124,5 +126,12 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # Local LLM Claude Code
-export ANTHROPIC_BASE_URL="http://127.0.0.1:8001"
-export ANTHROPIC_API_KEY="dummy"
+# export ANTHROPIC_BASE_URL="http://127.0.0.1:8001"
+# export ANTHROPIC_API_KEY="dummy"
+# export ANTHROPIC_MODEL="Qwen/Qwen2.5-Coder-7B-Instruct"
+
+# Cloud LLM Claude Code
+export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
+export ANTHROPIC_API_KEY=""
+export ANTHROPIC_MODEL="minimax/minimax-m2.1"

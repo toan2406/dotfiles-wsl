@@ -13,6 +13,9 @@ return {
             backend = 'tmux',
           },
           win = {
+            wo = {
+              -- winhighlight = 'Normal:Normal',
+            },
             keys = {
               nav_left  = { '<C-w>h', '<C-\\><C-n><C-w>h', expr = false, desc = 'navigate to the left window' },
               nav_down  = { '<C-w>j', '<C-\\><C-n><C-w>j', expr = false, desc = 'navigate to the below window' },
