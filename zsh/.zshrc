@@ -120,3 +120,9 @@ export LS_COLORS=$LS_COLORS:'ow=1;34:'
 # CUDA toolkit to build llama.cpp
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+export PATH=$HOME/.local/bin:$PATH
+
+# Local LLM Claude Code
+export ANTHROPIC_BASE_URL="http://127.0.0.1:8001"
+export ANTHROPIC_API_KEY="dummy"

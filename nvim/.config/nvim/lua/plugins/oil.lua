@@ -37,7 +37,7 @@ return {
 
       vim.api.nvim_set_hl(0, 'OilFloat', { ctermbg = 'black', ctermfg = 'white' })
 
-      vim.keymap.set('n', '<leader>e', oil.toggle_float, { desc = 'Open parent directory' })
+      vim.keymap.set('n', '<leader>e', oil.toggle_float, { desc = 'Open Parent Directory' })
     end,
   },
 }
